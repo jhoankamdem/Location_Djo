@@ -1,0 +1,37 @@
+.gmenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 40px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px; /* ajout d'arrondis */
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5); /* ajout d'une ombre */
+  gap: 1em;
+  min-width: 320px; /* définition de la largeur minimale */
+}
+
+@media screen and (max-width: 768px) {
+  /* règles pour les écrans de petite taille */
+  .gmenu {
+    flex-wrap: wrap; /* autorise le retour à la ligne des éléments */
+    justify-content: center; /* centre les éléments sur la ligne */
+    gap: 2%; /* ajuste l'espace entre les éléments en % */
+    padding: 10px; /* réduit le padding */
+  }
+
+  .gmenu li {
+    flex-basis: 50%; /* définit la largeur des éléments */
+  }
+}
+
+.start {
+  font-size: 24px;
+}
+
+.end {
+  font-size: 18px;
+}
+
+

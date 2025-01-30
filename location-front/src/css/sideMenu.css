@@ -1,0 +1,22 @@
+.Side {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #333;
+  padding: 0px;
+  border-radius: 10px; /* ajout d'arrondis */
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5); /* ajout d'une ombre */
+}
+
+.Side * {
+  border-radius: 10px; /* ajout d'arrondis pour tous les éléments enfants */
+}
+
+
+  footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+  }
+  
