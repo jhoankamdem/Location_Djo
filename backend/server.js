@@ -1,6 +1,10 @@
 const http = require('http');
 const app = require('./app');
 
+if (typeof(PhusionPassenger) !== 'undefined') {
+    PhusionPassenger.configure({ autoInstall: false });
+}
+
 const normalizePort = val => {
     const port = parseInt(val, 10);
 
@@ -45,4 +49,8 @@ server.on('listening', ()=> {
     console.log('Listening on ' + bind);
 })
 
-server.listen(port);
+if (typeof(PhusionPassenger) !== 'undefined') {
+    server.listen('passenger');
+} else {
+    server.listen(port);
+}
