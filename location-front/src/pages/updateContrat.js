@@ -34,7 +34,7 @@ export default function UpdateContrat() {
   useEffect(() => {
     const fetchLocataires = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/locataire/${params.id}`);
+        const response = await axios.get(`http://location.fullstackcamer.com/locataire/${params.id}`);
         setLocataires(response.data);
       } catch (error) {
         console.log(error);
@@ -67,7 +67,7 @@ export default function UpdateContrat() {
     event.preventDefault(); // empêcher le comportement par défaut du formulaire
   
     try {
-      const response = await axios.put(`http://localhost:5000/locataire/${params.id}`, locataires);
+      const response = await axios.put(`http://location.fullstackcamer.com/locataire/${params.id}`, locataires);
 
       // Affichage de la réponse du serveur dans la console
       

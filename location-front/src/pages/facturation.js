@@ -14,7 +14,7 @@ export default function Facturation() {
   // Récupérer les données de votre base de données lors du montage du composant
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('http://localhost:5000/locataire');
+      const response = await axios.get('http://location.fullstackcamer.com/locataire');
       setData(response.data);
     }
     fetchData();
@@ -52,7 +52,7 @@ export default function Facturation() {
         const nouveauIndex = locataire.nouvelleIndex; // Récupérer le nouvel index saisi par l'utilisateur
         const factureTotal =  locataire.total;
         // Envoyer une requête POST à l'API pour ajouter une nouvelle cellule de facture pour ce locataire
-        const response = await axios.post(`http://localhost:5000/locataire/${locataire._id}`, { date, ancienIndex, nouveauIndex, factureTotal});
+        const response = await axios.post(`http://location.fullstackcamer.com/locataire/${locataire._id}`, { date, ancienIndex, nouveauIndex, factureTotal});
   
         // Mettre à jour les données locales avec les données renvoyées par l'API
         const updatedLocataire = response.data;

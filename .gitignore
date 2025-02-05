@@ -40,7 +40,10 @@ build/Release
 
 # Dependency directories
 backend/node_modules/
-frontend/node_modules/
+backend/package-lock.json
+location-front/node_modules/
+location-front/package-lock.json
+
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)

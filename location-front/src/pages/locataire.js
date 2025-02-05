@@ -13,7 +13,7 @@ export default function Locataire() {
   useEffect(() => {
     const fetchLocataires = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/locataire');
+        const response = await axios.get('http://location.fullstackcamer.com/locataire');
         setLocataires(response.data);
       } catch (error) {
         console.log(error);
@@ -69,7 +69,7 @@ export default function Locataire() {
   function supprimerLocataire(id) {
     const fetchLocataires = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/locataire/${id}`);
+        const response = await axios.get(`https://location.fullstackcamer.com/locataire/${id}`);
         setLocataires(response.data);
       } catch (error) {
         console.log(error);

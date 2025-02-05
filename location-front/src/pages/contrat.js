@@ -65,7 +65,7 @@ export default function Contrat() {
 
     
     try {
-      const response = await axios.post('http://localhost:5000/locataire', locataires);
+      const response = await axios.post('https://location.fullstackcamer.com/locataire', locataires);
 
       // Affichage de la réponse du serveur dans la console
       

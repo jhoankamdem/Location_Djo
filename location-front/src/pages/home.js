@@ -7,7 +7,7 @@ export default function Home() {
   useEffect(() => {
     const fetchLocataires = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/locataire');
+        const response = await axios.get('http://location.fullstackcamer.com/locataire');
         setLocataires(response.data);
       } catch (error) {
         console.log(error);
@@ -16,8 +16,8 @@ export default function Home() {
     fetchLocataires();
   }, []);
 
-  const chambres = locataires.filter(locataire => locataire.logement == 'chambre' && locataire.statut);
-  const studios = locataires.filter(locataire => locataire.logement == 'studio' && locataire.statut);
+  const chambres = locataires.filter(locataire => locataire.logement === 'chambre' && locataire.statut);
+  const studios = locataires.filter(locataire => locataire.logement === 'studio' && locataire.statut);
 
   const loyersEnRetard = locataires.filter(locataire => {
     const now = new Date();
