@@ -1,17 +1,15 @@
-const mongoose = require("mongoose");
+const { Sequelize } = require('sequelize');
 
-mongoose.set("strictQuery", false);
-
-const url = process.env.MONGODB_URI || "mongodb+srv://jhoankamdem:iWGHvVFAOmRdb0sl@cluster0.57vv0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const sequelize = new Sequelize('postgres://afscor:prof@localhost:5432/location_db');
 
 const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI || url);
-    console.log("Mongo connecté");
-  } catch (err) {
-    console.error(`Erreur de connexion à MongoDB: ${err.message}`);
-    process.exit(1);
+  try{
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully');
+  } catch (error){
+    console.error('Unable to connect to the database', error);
   }
-};
+}
+
 
 module.exports = connectDB;
