@@ -11,10 +11,11 @@ const locataireSchema = new Schema(
     logement:{type: String, required:true},
     numeroLogement: { type: String, required: true },
     telephone: { type: String, required: true },
+    nb_months: { type: Number, required: true, default: 0 },
     dateDebut: { type: Date, default: Date.now },
     dateFin: { type: Date, required: true },
     montantLoyer: { type: Number, required: true },
-    caution: { type: Number, required: false, default:0},
+    caution: { type: Number, required: false, default:0 },
     montantTotal: { type: Number }, // Nouvelle propriété pour stocker le montant total
     factures: [
       {
